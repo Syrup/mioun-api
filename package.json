@@ -1,0 +1,30 @@
+{
+  "name": "mioun-api",
+  "version": "1.0.3",
+  "description": "A simple API for Github",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Miouns/mioun-api.git"
+  },
+  "keywords": [
+    "github",
+    "api",
+    "github-api",
+    "mioun",
+    "mioun-api"
+  ],
+  "author": "Mioun",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Miouns/github-api/issues"
+  },
+  "homepage": "https://github.com/Miouns/github-api#readme",
+  "dependencies": {
+    "node-superfetch": "^0.1.10"
+  }
+}
