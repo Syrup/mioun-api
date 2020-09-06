@@ -11,7 +11,11 @@ async github(name) {
   return github;
 };
 async kiss() {
-  const { body: kiss } = await fetch.get('http://api.mioun.repl.co/api/kiss')
+  const { body: kiss } = await fetch.get('https://nekos.life/api/kiss')
   return kiss;
 };
+async hug() {
+  const { body: hug } = await fetch.get('https://nekos.life/api/hug');
+  return hug;
+}
 }
