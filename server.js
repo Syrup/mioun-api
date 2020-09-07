@@ -7,6 +7,7 @@ module.exports = class MiounApi {
     this.version = version;
   }
 async github(name) {
+  const name = encodeURI(name);
   const { body: github } = await fetch.get(`https://api.github.com/users/${name}`);
   return github;
 };
@@ -23,6 +24,7 @@ async anime() {
   return anime;
 }
 async aes(text) {
+  const text = encodeURI(text);
   const {  body: aesthetic } = await fetch.get(`https://nezumiapi.veguiizumi.repl.co/api/aesthetic?text=${text}`);
   return aesthetic;
 }

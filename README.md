@@ -121,6 +121,6 @@ const git = api.github('miouns').then(body => {
   const aes = await api.aes('Hello World');
 
   console.log(aes) // => {"aesthetic":"Ｈｅｌｌｏ Ｗｏｒｌｄ"}
-  encodeURI(console.log(aes.aesthetic)) // => Ｈｅｌｌｏ Ｗｏｒｌｄ
+  console.log(aes.aesthetic) // => Ｈｅｌｌｏ Ｗｏｒｌｄ
 })
 ```
