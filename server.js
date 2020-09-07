@@ -18,4 +18,12 @@ async hug() {
   const { body: hug } = await fetch.get('https://nekos.life/api/hug');
   return hug;
 }
+async anime() {
+  const { body: anime } = await fetch.get('https://nezumiapi.veguiizumi.repl.co/api/anime')
+  return anime;
+}
+async aes(text) {
+  const {  body: aesthetic } = fetch.get(`https://nezumiapi.veguiizumi.repl.co/api/aesthetic?text=${text}`);
+  return aesthetic;
+}
 }
