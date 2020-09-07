@@ -23,7 +23,7 @@ async anime() {
   return anime;
 }
 async aes(text) {
-  const {  body: aesthetic } = fetch.get(`https://nezumiapi.veguiizumi.repl.co/api/aesthetic?text=${text}`);
+  const {  body: aesthetic } = await fetch.get(`https://nezumiapi.veguiizumi.repl.co/api/aesthetic?text=${text}`);
   return aesthetic;
 }
 }
