@@ -1,6 +1,6 @@
 {
   "name": "mioun-api",
-  "version": "1.0.7",
+  "version": "1.0.9",
   "description": "A simple API for Github",
   "main": "server.js",
   "scripts": {

@@ -7,8 +7,8 @@ module.exports = class MiounApi {
     this.version = version;
   }
 async github(name) {
-  const name = encodeURI(name);
-  const { body: github } = await fetch.get(`https://api.github.com/users/${name}`);
+  const gname = encodeURI(name);
+  const { body: github } = await fetch.get(`https://api.github.com/users/${gname}`);
   return github;
 };
 async kiss() {
@@ -24,8 +24,8 @@ async anime() {
   return anime;
 }
 async aes(text) {
-  const text = encodeURI(text);
-  const {  body: aesthetic } = await fetch.get(`https://nezumiapi.veguiizumi.repl.co/api/aesthetic?text=${text}`);
+  const atext = encodeURI(text);
+  const {  body: aesthetic } = await fetch.get(`https://nezumiapi.veguiizumi.repl.co/api/aesthetic?text=${atext}`);
   return aesthetic;
 }
 }
