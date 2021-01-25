@@ -11,7 +11,7 @@ module.exports = class MiounApi {
     const { body: github } = await fetch.get(`https://api.github.com/users/${gname}`);
     return github;
   };
-  syncc kiss() {
+  async kiss() {
     const { body: kiss } = await fetch.get('https://nekos.life/api/kiss')
     return kiss;
   };
