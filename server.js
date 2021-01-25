@@ -31,6 +31,6 @@ module.exports = class MiounApi {
   async trakteer(name) {
     const tname = encodeURIComponent(name);
     const res = await fetch.get(`https://api.mioun.my.id/trakteer?name=${tname}`)
-    return res;
+    return res.body;
   }
 }
