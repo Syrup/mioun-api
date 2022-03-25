@@ -13,7 +13,8 @@
     "ejs": "^3.1.5",
     "express": "^4.17.1",
     "node-superfetch": "^0.1.10",
-		"glob": "latest",
-    "superagent": "^6.1.0"
+    "glob": "latest",
+    "superagent": "^6.1.0",
+    "request": "latest"
   }
 }
