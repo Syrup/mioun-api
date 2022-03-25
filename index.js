@@ -12,6 +12,7 @@ async function load() {
   console.log(paths);
   paths.forEach((path) => {
     let file = require(path);
+    api[`/${file.help.category}`] = {};
     api[`/${file.help.category}`][`/${file.help.name}`] = file.help.parameters;
     app.use(`/${file.help.category}/${file.help.name}`, file.router);
   });
