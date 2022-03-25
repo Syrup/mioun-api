@@ -15,6 +15,7 @@
     "node-superfetch": "^0.1.10",
     "glob": "latest",
     "superagent": "^6.1.0",
-    "request": "latest"
+    "request": "latest",
+    "cheerio": "latest"
   }
 }
