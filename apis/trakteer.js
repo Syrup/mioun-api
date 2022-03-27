@@ -46,16 +46,30 @@ router.get("/", (req, res) => {
         .children("div")
         .text()
         .trim();
-      console.log(goalsTarget);
       let not_found = $("div.d-flex").children("h1").text().includes("404")
         ? true
         : false;
+      let not_active = $("div.d-flex")
+        .children("h1")
+        .text()
+        .includes("Halaman creator ini tidak aktif");
       if (not_found)
         return r.status(404).send(
           JSON.stringify(
             {
               code: 404,
               why: "User not found",
+            },
+            null,
+            2
+          )
+        );
+      if (not_active)
+        return r.status(404).send(
+          JSON.stringify(
+            {
+              code: 404,
+              why: "User not active",
             },
             null,
             2
