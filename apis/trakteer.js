@@ -19,7 +19,7 @@ router.get("/", (req, res) => {
         .children("div.occupation")
         .first()
         .text();
-      let status = $("div.status").html().replace(/<br>/g, "\n");
+      let status = $("div.status")?.html()?.replace(/<br>/g, "\n");
       let links = $("div.summary").children("div.links");
       let goals = $("div.goal");
       let goalsTarget = goals
@@ -44,7 +44,8 @@ router.get("/", (req, res) => {
         .children("article")
         .children("section")
         .children("div")
-        .text();
+        .text()
+        .trim();
       console.log(goalsTarget);
       let not_found = $("div.d-flex").children("h1").text().includes("404")
         ? true
@@ -97,4 +98,3 @@ module.exports = {
     parameters: ["?name=string"],
   },
 };
-
