@@ -40,6 +40,12 @@ router.get("/", (req, res) => {
         .children("span.explanation")
         .children("strong.text-no-wrap")
         .text();
+      let goalsPercentage = goals
+        .children("label")
+        .first()
+        .children("span.explanation:nth-child(4)")
+        .children("strong")
+        .text();
       let goalsDescription = $("div.modal-goal-description")
         .children("article")
         .children("section")
@@ -97,6 +103,7 @@ router.get("/", (req, res) => {
           description: goalsDescription,
           target: goalsTarget,
           reached: goalsReached,
+          percentage: goalsPercentage,
         },
       };
       r.status(200).send(JSON.stringify(json, null, 2));
