@@ -14,7 +14,8 @@ async function load() {
   paths.forEach((path) => {
     let file = require(path);
     let conf = {};
-    conf[`/${file.help.category}/${file.help.name}`] = file.help;
+    if(file.help.category) conf[`${file.help.category}`][`${file.help.name}`] = file.help;
+    conf[file.help.name] = file.help
     apis.push(conf);
     app.use(`/${file.help.category}/${file.help.name}`, file.router);
   });
